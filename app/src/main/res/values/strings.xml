@@ -2,5 +2,6 @@
     <string name="app_name">NYCSchools</string>
 
     <string name="home">Home Fragment</string>
+    <string name="school_detail">School Detail Fragment</string>
     <string name="attendence_rate">Attendance Rate </string>
 </resources>

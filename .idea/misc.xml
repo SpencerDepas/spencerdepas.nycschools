@@ -7,6 +7,7 @@
         <entry key="app/src/main/res/drawable/school_background_gradiant.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.30364583333333334" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.22604166666666667" />
+        <entry key="app/src/main/res/layout/fragment_school_detail.xml" value="0.67" />
         <entry key="app/src/main/res/layout/home_fragment.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_chef.xml" value="0.22604166666666667" />
         <entry key="app/src/main/res/layout/item_school.xml" value="0.5" />

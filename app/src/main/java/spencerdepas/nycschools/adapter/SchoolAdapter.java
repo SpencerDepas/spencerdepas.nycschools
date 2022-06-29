@@ -44,12 +44,12 @@ public class SchoolAdapter extends RecyclerView.Adapter<SchoolAdapter.CustomView
     }
 
     private void setupViewClickEvent(final View view, final School item) {
-//        final View text = view.findViewById(R.id.cuisine_type);
-//        text.setOnClickListener((View v) -> {
-//            if (callBack != null) {
-//                callBack.onItemClicked(item.getDescription());
-//            }
-//        });
+        final View text = view.findViewById(R.id.parent_view);
+        text.setOnClickListener((View v) -> {
+            if (callBack != null) {
+                callBack.onItemClicked(item.getDbn());
+            }
+        });
     }
 
     @Override

@@ -9,6 +9,12 @@
         android:id="@+id/nav_home"
         android:name="spencerdepas.nycschools.ui.home.HomeFragment"
         android:label="@string/home"
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_school_detail"
+        android:name="spencerdepas.nycschools.ui.schooldetail.SchoolDetailFragment"
+        android:label="@string/school_detail"
+        tools:layout="@layout/fragment_school_detail" />
 
 </navigation>

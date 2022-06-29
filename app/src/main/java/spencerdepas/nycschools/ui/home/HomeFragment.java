@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import spencerdepas.nycschools.MainActivity;
 import spencerdepas.nycschools.databinding.FragmentHomeBinding;
-
 
 
 public class HomeFragment extends Fragment implements HomeViewModel.HomeViewModelCallBack {
@@ -46,9 +46,8 @@ public class HomeFragment extends Fragment implements HomeViewModel.HomeViewMode
         binding = null;
     }
 
-
     @Override
-    public void goToPhotoMeasureNail() {
-
+    public void goToSchoolDetail(String schoolDBN) {
+        ((MainActivity) requireActivity()).goToSchoolDetail(schoolDBN);
     }
 }
