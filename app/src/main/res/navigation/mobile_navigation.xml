@@ -13,6 +13,7 @@
 
         <action
             android:id="@+id/home_to_school_detail"
+            app:popUpTo="@+id/nav_home"
             app:destination="@id/nav_school_detail" />
 
     </fragment>

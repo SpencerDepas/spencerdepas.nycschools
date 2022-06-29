@@ -22,6 +22,8 @@ public class HomeViewModel extends ViewModel implements SchoolAdapter.SchoolAdap
     public HomeViewModel(HomeViewModelCallBack callBack) {
         this.callBack = callBack;
         getSchoolList();
+        //I would like to add loading spinners
+        //I would like to add pagination
     }
 
     private void getSchoolList() {
