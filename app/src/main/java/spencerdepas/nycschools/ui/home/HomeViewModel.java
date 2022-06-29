@@ -2,7 +2,6 @@ package spencerdepas.nycschools.ui.home;
 
 import android.util.Log;
 
-
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
@@ -11,15 +10,16 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import spencerdepas.nycschools.adapter.SchoolAdapter;
 import spencerdepas.nycschools.api.API;
 import spencerdepas.nycschools.model.SATInfo;
 import spencerdepas.nycschools.model.School;
 
 
-public class HomeViewModel extends ViewModel {
+public class HomeViewModel extends ViewModel implements SchoolAdapter.SchoolAdapterCallBack {
 
     private HomeViewModelCallBack callBack;
-    public MutableLiveData<List<School>> schools = new MutableLiveData<List<School>>();
+    public MutableLiveData<List<School>> schools = new MutableLiveData<>();
 
     public HomeViewModel(HomeViewModelCallBack callBack) {
         this.callBack = callBack;
@@ -29,7 +29,7 @@ public class HomeViewModel extends ViewModel {
     }
 
     private void getSchoolList() {
-        API.get().getSchoolList(1).enqueue(new Callback<List<School>>() {
+        API.get().getSchoolList(7).enqueue(new Callback<List<School>>() {
             @Override
             public void onResponse(Call<List<School>> call, retrofit2.Response<List<School>> response) {
                 schools.postValue(response.body());
@@ -56,6 +56,11 @@ public class HomeViewModel extends ViewModel {
                 Log.d("", "");
             }
         });
+    }
+
+    @Override
+    public void onItemClicked(String month) {
+        Log.d("", "");
     }
 
     public interface HomeViewModelCallBack {
