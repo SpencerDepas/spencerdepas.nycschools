@@ -21,7 +21,7 @@ public class BaseActivity extends AppCompatActivity {
     public void goToSchoolDetail(String schoolDBN) {
         Bundle bundle = new Bundle();
         bundle.putString(SCHOOL_DBN, schoolDBN);
-        goToFragment(R.id.nav_school_detail, bundle);
+        goToFragment(R.id.home_to_school_detail, bundle);
     }
 
     protected void goToFragment(int fragmentId, Bundle bundle) {

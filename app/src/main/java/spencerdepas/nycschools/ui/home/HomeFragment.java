@@ -27,6 +27,8 @@ public class HomeFragment extends Fragment implements HomeViewModel.HomeViewMode
         binding.setLifecycleOwner(this);
         View root = binding.getRoot();
 
+        //I would like to add loading spinners
+
         return root;
     }
 

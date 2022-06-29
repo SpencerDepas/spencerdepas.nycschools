@@ -17,7 +17,7 @@ import spencerdepas.nycschools.model.SATInfo;
 public class SchoolDetailViewModel extends ViewModel {
 
     private SchoolDetailViewModelCallBack callBack;
-    public MutableLiveData<List<SATInfo>> satInfo = new MutableLiveData<>();
+    public MutableLiveData<SATInfo> satInfo = new MutableLiveData<>();
     private String schoolDBN = "";
 
     public SchoolDetailViewModel(SchoolDetailViewModelCallBack callBack) {
@@ -31,6 +31,7 @@ public class SchoolDetailViewModel extends ViewModel {
                 //satInfo.postValue(response.body());
                 if(response.body() != null && response.body().size() > 0 && response.body().get(0) != null
                     && response.body().get(0).getSchoolName() != null){
+                    satInfo.postValue(response.body().get(0));
                     Log.d("TETETETETET", "TETETETETET: " + response.body().get(0).getSchoolName());
                 }
 
